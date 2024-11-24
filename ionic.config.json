@@ -1,0 +1,7 @@
+{
+  "name": "ADMIN-APP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

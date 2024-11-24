@@ -1,0 +1,141 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #13161c;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-blur {
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  z-index: -1;
+  /* Hace que el fondo quede detrás de los elementos */
+  background-color: #13161c;
+  background-image:
+    radial-gradient(37.88% 68.62% at 50% 0, rgba(10, 233, 138, 0.3) 0, rgba(0, 124, 71, 0) 80%),
+    radial-gradient(10% 10% at 50% 0, rgba(10, 233, 138, 0.5) 0, rgba(0, 124, 71, 0.4) 90%, rgba(0, 124, 71, 0) 0),
+    radial-gradient(100% 28.09% at 100% 10%, rgba(10, 233, 138, 0.2) 0, rgba(0, 124, 71, 0.1) 80%, rgba(0, 124, 71, 0) 100%),
+    linear-gradient(180deg, rgba(0, 124, 71, 0.075) 35.79%, rgba(0, 124, 71, 0.05) 80%, #13161c),
+    radial-gradient(74.84% 135.56% at 100% 10%, rgba(0, 124, 71, 0.5) 0, #13161c 80%);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: blur(20px);
+  /* Desenfoque solo en el fondo */
+}
+
+.d-flex-center {
+  position: relative;
+  z-index: 1;
+  /* Asegura que el formulario esté sobre el fondo */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  /* Fondo semi-transparente */
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+
+app-logo {
+  margin-bottom: 20px;
+  /* Espacio entre el logo y el formulario */
+  position: relative;
+  z-index: 2;
+}
+
+.custom-input ion-item {
+  background: rgba(255, 255, 255, 0.3);
+  /* Fondo semi-transparente */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.custom-input ion-input,
+.custom-input ion-icon {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.custom-input ion-icon {
+  --color: #a9a9ff;
+  /* Color del icono */
+}
+
+.validators {
+  color: #ff4d4d;
+  /* Color de los mensajes de error */
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+/* Botón de enviar */
+.submit {
+  --background: #0ae98a; /* Verde de fondo */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+ion-button {
+  --background-activated: #0ae98a; /* Elimina el color de fondo al hacer clic */
+}
+
+/* Botones con estilo outline */
+ion-button[fill="outline"] {
+  --border-color: #0ae98a; /* Color del borde verde */
+  --color: #0ae98a; /* Color del texto verde */
+  font-weight: bold;
+}
+
+ion-button[fill="outline"]:hover {
+  --border-color: #0aa97a; /* Verde más oscuro en hover */
+  --color: #0aa97a; /* Verde más oscuro en hover */
+}
+
+ion-button[fill="outline"]:focus,
+ion-button[fill="outline"]:active {
+  --border-color: #0aa97a; /* Mantén verde oscuro al hacer clic */
+  --color: #0aa97a;
+  outline: none; /* Quita el borde de enfoque */
+}
+
+/* Enlace de "olvidaste la contraseña" */
+p {
+  color: #ffffff; /* Blanco por defecto */
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: 1rem;
+  transition: color 0.3s;
+}
+
+p:hover {
+  text-decoration: underline;
+  color: #0ae98a; /* Verde en hover */
+}
+
+p:focus,
+p:active {
+  color: #0aa97a; /* Verde oscuro al hacer clic o al enfocarse */
+  outline: none; /* Remueve el borde de enfoque */
+}

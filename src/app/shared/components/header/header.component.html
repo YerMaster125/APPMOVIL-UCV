@@ -1,0 +1,14 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+
+    <ion-button slot="start" *ngIf="backButton"> <!-- Mostrar el botón solo si backButton tiene un valor -->
+      <ion-back-button [defaultHref]="backButton"></ion-back-button>
+    </ion-button>
+
+
+    <ion-title>
+      <strong>{{title}}</strong>
+      <div class="user">U S E R</div>
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
